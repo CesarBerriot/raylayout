@@ -1,0 +1,5 @@
+add_executable(raylayout_demo WIN32 source/main.c)
+target_link_libraries(raylayout_demo PRIVATE raylayout)
+if(MSVC)
+  target_link_options(raylayout_demo PRIVATE /ENTRY:mainCRTStartup)
+endif()
